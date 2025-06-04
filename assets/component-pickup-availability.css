@@ -82,8 +82,6 @@ pickup-availability-drawer[open] {
 
 .pickup-availability-header {
   align-items: flex-start;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 1.2rem;
 }
 
