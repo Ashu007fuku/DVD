@@ -14,7 +14,7 @@
 {% # theme-check-enable %}
 
 <tr
-  class="variant-item{% unless show_image %} variant-item--no-media{% endunless %}{% if item.available and item.unit_price_measurement %} variant-item--unit-price{% endif %}"
+  class="variant-item gap-m{% unless show_image %} variant-item--no-media{% endunless %}{% if item.available and item.unit_price_measurement %} variant-item--unit-price{% endif %}"
   id="Variant-{{ variant.id }}"
   data-variant-id="{{ variant.id }}"
 >
@@ -437,7 +437,7 @@
     {% # theme-check-enable %}
   </td>
 </tr>
-<tr class="small-hide medium-hide hidden desktop-row-error">
+<tr class="small-hide medium-hide hide-mobile hidden desktop-row-error">
   <td></td>
   <td>
     <div class="variant-item__error" id="Quick-order-list-item-error-desktop-{{ variant.id }}" role="alert">
