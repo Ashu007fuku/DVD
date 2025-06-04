@@ -1,13 +1,4 @@
-:root {
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
-  --alpha-link: 0.85;
-  --alpha-badge-border: 0.1;
-  --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  --focused-base-outline-offset: 0.3rem;
-  --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-}
-
+@layer components {
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
@@ -73,8 +64,10 @@
   --shadow-opacity: var(--media-shadow-opacity);
   --shadow-visible: var(--media-shadow-visible);
 }
+}
 
 /* base */
+@layer layout {
 
 .page-width {
   max-width: var(--page-width);
@@ -184,7 +177,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 82rem;
   margin: 0 auto 2rem;
 }
+}
 
+@layer utilities {
 .list-unstyled {
   margin: 0;
   padding: 0;
@@ -194,6 +189,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 .hidden {
   display: none !important;
 }
+@layer a11y {
 
 .visually-hidden {
   position: absolute !important;
@@ -224,6 +220,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   height: auto;
   clip: auto;
 }
+}
 
 .full-width-link {
   position: absolute;
@@ -233,11 +230,13 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   left: 0;
   z-index: 2;
 }
+}
 
 ::selection {
   background-color: rgba(var(--color-foreground), 0.2);
 }
 
+@layer typography {
 .text-body {
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
@@ -411,6 +410,7 @@ blockquote {
 .color-foreground {
   color: rgb(var(--color-foreground));
 }
+}
 
 table:not([class]) {
   table-layout: fixed;
@@ -576,19 +576,6 @@ details > * {
   }
 }
 
-:root {
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-announcement-bar: 250ms;
-  --duration-medium: 300ms;
-  --duration-long: 500ms;
-  --duration-extra-long: 600ms;
-  --duration-extra-longer: 750ms;
-  --duration-extended: 3s;
-  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
-}
 
 .underlined-link,
 .customer a,

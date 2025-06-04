@@ -52,7 +52,9 @@ product-info {
   }
 
   .product__media-container .slider-buttons {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 1rem;
   }
 
   .product--right .product__media-wrapper {
@@ -988,7 +990,7 @@ a.product__text {
   }
 
   .product__media-wrapper .slider-mobile-gutter .slider-button {
-    display: none;
+    display: flex;
   }
 
   .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
